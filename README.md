@@ -11,6 +11,7 @@
 * 3.生成二维码(或者去掉二维码白边)
 * 4.扫一扫页面样式自己定
 * 5.生成带图标的二维码
+
 重要的事情说三遍记得添加权限
 ```
  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
