@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:id="@+id/capture_container"
+                                                   android:orientation="vertical">
+    <SurfaceView
+            android:id="@+id/capture_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+    />
+
+    <RelativeLayout
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/capture_crop_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+
+        <ImageView
+                android:id="@+id/capture_scan_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/icon_code_line"/>
+
+        <ImageView
+                android:id="@+id/scan_image"
+                android:src="@drawable/cameraguide"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+        />
+    </RelativeLayout>
+
+    <Button android:layout_width="wrap_content"
+            android:text="相册"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="30dp"
+            android:id="@+id/btn_photo"
+            app:layout_constraintTop_toBottomOf="@+id/capture_crop_view"
+            android:layout_height="wrap_content"/>
+
+</android.support.constraint.ConstraintLayout>
